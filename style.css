@@ -100,15 +100,13 @@ section{
     padding: 150px 100px;
     background: rgba(244, 244, 244, 1);
     width: 90%;
-    margin: auto;
+    margin: auto; 
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .3),-1px 1px 10px rgba(0, 0, 0, .3);
 }
 
-.about{
-    height: 600px;
-    display: flex;
-    justify-content: space-between; 
-
+.about{ 
+    display: flex;  
+    justify-content: space-between;
 }
 
 .section_title{
@@ -133,7 +131,7 @@ section{
     margin-bottom: 50px;
 }
 
-.section_btn{
+.section_btn a{
     text-align: center;
     color: #ccc;
     background: #333;
@@ -141,9 +139,12 @@ section{
     text-decoration: none; 
     width: 300px;
 }
+.section_btn i{
+    margin-right: 10px;
+}
 
 .side_right img{
-    width: 500px;
+    height: 100%;
 }
 
 img{
@@ -171,14 +172,13 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0px; 
     width: 500px;
     
 }
 
 .card img{
     display: block;
-    width: 30%; 
+    width: 50%; 
     margin-bottom: 20px;
 }
 
@@ -188,9 +188,48 @@ img{
 }
 
 .card_text{
-    width: 50%;
+    width: 90%;
 }
 
 .featured{
     padding: 100px;
+}
+
+@media screen and (max-width:1200px){
+    .about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section_title, .section_subTitle, .section_info, .section_btn{
+        text-align: center;
+    }
+
+    .section_btn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+     
+}
+
+
+@media screen and (max-width:992px){
+    .cards{
+        flex-direction: column;  
+        align-items: center;
+    }
+
+    .especialidad{
+        height: auto;
+    }
+
+    .card_text{
+        margin-bottom: 50px;
+    }
+    section{
+        padding: 50px 0px;
+    }
+     
 }
