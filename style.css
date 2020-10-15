@@ -13,6 +13,25 @@ body{
     display: none;
 }
 
+.header .navbar .side_right label{
+    display: none;
+}
+
+
+.menu a{
+    color: #fff;
+    margin-left: 40px;
+    text-decoration: none; 
+    padding: 15px;
+    transition: .5s;
+    transition-property: background-color;
+}
+
+.menu a:hover{
+    background-color: rgba(51, 51, 51, .5);
+    border-radius: 10px;
+}
+
 #check_btn{
     cursor: pointer;
 }
@@ -66,7 +85,6 @@ span{
 }
 
 .side_right{
-    font-size: 20px;
 }
 
 .info_header{
@@ -230,6 +248,51 @@ img{
     }
     section{
         padding: 50px 0px;
+    }
+
+    .header .navbar .side_right label{
+        display: block;
+    }
+
+    
+    .header .navbar{
+        position: fixed;
+        width: 83%;
+        background-color:  rgba(51, 51, 51, 1);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #check_btn{
+        font-size: 30px;
+    }
+    .menu{ 
+        z-index: 1;
+        position: fixed; 
+        left: 1200px; 
+        margin-top: 10px; 
+        background-color: rgba(51, 51, 51, 1);
+        width: 30%;
+        transition: 1.5s;
+        transition-property: left;
+    }
+
+    #check:checked ~ .menu{
+        left: 61%;  
+    }
+ 
+
+    .menu a{
+        display: block; 
+        text-align: center;
+        margin-left: 0px;
+        border-radius: 0px;
+    }
+    .menu a:hover{ 
+        background-color:  rgba(37, 211, 51, .3);
+        border-radius: 0;
+        border-left: 2px solid;
+        
     }
      
 }
